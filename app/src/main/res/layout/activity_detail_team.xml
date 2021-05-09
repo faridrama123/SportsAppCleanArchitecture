@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.detail.DetailTeamActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+     >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_detail_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/iv_detail_image"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="25dp"
+                    android:layout_below="@+id/iv_detail_poster"
+                    android:contentDescription="@string/image_description"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/league"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_detail_image"
+                    android:layout_below="@+id/iv_detail_poster"
+                    android:text="@string/text_league"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="35dp"
+                    >
+                </TextView>
+                <TextView
+                    android:id="@+id/stadium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_detail_image"
+                    android:layout_below="@+id/league"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/text_stadium"
+                    android:textColor="@color/white"
+                    >
+                </TextView>
+                <TextView
+                    android:id="@+id/website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_detail_image"
+                    android:layout_below="@+id/stadium"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/text_website"
+                    android:textColor="@color/white"
+                    >
+                </TextView>
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include android:id="@+id/content" layout="@layout/content_detail_team" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/menu_favorite"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,4 @@
+include ':favorites'
+include ':core'
+include ':app'
+rootProject.name = "Thesportsdb CleanArchitecture"

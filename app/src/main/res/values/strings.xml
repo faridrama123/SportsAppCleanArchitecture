@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Thesportsdb CleanArchitecture</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="image_description">Image</string>
+    <string name="text_primary">Sample of title text</string>
+    <string name="text_subtitle">Sample of subtitle text</string>
+
+    <string name="no_data">Empty data</string>
+    <string name="something_wrong">Oops.. something went wrong</string>
+
+    <string name="menu_favorite">Favorite</string>
+
+    <string name="text_league">League: %s</string>
+    <string name="text_stadium">Stadium: %s</string>
+    <string name="text_website">Website: %s</string>
+    <string name="text_instagram">Instagram: %s</string>
+    <string name="title_favorites">Favorites</string>
+
+
+</resources>
