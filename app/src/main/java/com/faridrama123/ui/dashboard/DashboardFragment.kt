@@ -20,15 +20,16 @@ class DashboardFragment : Fragment() {
 
 
     private val dashboardViewModel: DashboardViewModel by viewModels()
-    private lateinit var binding: FragmentDashboardBinding
+    private var fragmentDashboardBinding: FragmentDashboardBinding? = null
+    private val binding get () = fragmentDashboardBinding!!
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentDashboardBinding.inflate(inflater,container,false)
-        return  binding.root
+        fragmentDashboardBinding = FragmentDashboardBinding.inflate(inflater,container,false)
+        return binding.root
 
     }
 
@@ -70,6 +71,11 @@ class DashboardFragment : Fragment() {
 
 
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        fragmentDashboardBinding = null
     }
 
 

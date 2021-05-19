@@ -18,7 +18,8 @@ import javax.inject.Inject
 class NotificationsFragment : Fragment() {
 
 
-    private lateinit var binding: FragmentNotificationsBinding
+    private var fragmentNotificationsBinding: FragmentNotificationsBinding? = null
+    private val binding get() = fragmentNotificationsBinding!!
 
     @Inject
     lateinit var factory: ViewModelFactory
@@ -33,7 +34,7 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        fragmentNotificationsBinding = FragmentNotificationsBinding.inflate(inflater, container, false)
         return  binding.root
     }
 
@@ -75,6 +76,13 @@ class NotificationsFragment : Fragment() {
         }
 
     }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        fragmentNotificationsBinding = null
+    }
+
 
 
 
