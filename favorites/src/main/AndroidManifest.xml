@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.faridrama123.favorites">
 
@@ -13,8 +13,5 @@
         <dist:fusing dist:include="true" />
     </dist:module>
 
-    <application>
-        <activity android:name="com.faridrama123.maps.MapsActivity"></activity>
-    </application>
 
 </manifest>

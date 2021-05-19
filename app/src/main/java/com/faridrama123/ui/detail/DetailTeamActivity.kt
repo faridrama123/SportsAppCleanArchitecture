@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModel
 import com.bumptech.glide.Glide
 import com.faridrama123.R
 import com.faridrama123.core.domain.model.Teams
