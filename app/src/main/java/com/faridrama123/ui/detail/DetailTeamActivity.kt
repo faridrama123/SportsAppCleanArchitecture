@@ -67,4 +67,6 @@ class DetailTeamActivity : AppCompatActivity() {
             binding.fab.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_not_favorite_white))
         }
     }
+
+ 
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SportsApp CleanArchitecture</string>
+    <string name="app_name">Thesportsdb CleanArchitecture</string>
 
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
