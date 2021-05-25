@@ -12,7 +12,9 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class DetailTeamActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityDetailTeamBinding
+
+    private var activityDetailTeamBinding : ActivityDetailTeamBinding? = null
+    private val binding get() = activityDetailTeamBinding!!
     private val detailTeamViewModel : DetailTeamViewModel by viewModels()
 
     companion object {
@@ -21,7 +23,7 @@ class DetailTeamActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailTeamBinding.inflate(layoutInflater)
+        activityDetailTeamBinding = ActivityDetailTeamBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val detailTeam = intent.getParcelableExtra<Teams>(EXTRA_DATA)
@@ -67,5 +69,11 @@ class DetailTeamActivity : AppCompatActivity() {
         }
     }
 
+
+    override fun onDestroy() {
+        super.onDestroy()
+        activityDetailTeamBinding = null
+
+    }
  
 }

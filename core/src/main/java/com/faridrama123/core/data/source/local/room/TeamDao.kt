@@ -4,6 +4,7 @@ import androidx.room.*
 import com.faridrama123.core.data.source.local.entity.TeamEntity
 import kotlinx.coroutines.flow.Flow
 
+
 @Dao
 interface TeamDao {
 
