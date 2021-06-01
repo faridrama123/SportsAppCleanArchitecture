@@ -21,8 +21,32 @@ In a typical android project it is divided into 3 layers like this:
 
 ## Modularization
 Modularization is a technique of breaking an Android project into sections called modules. With modularization we will get a lot of advantages over implementing the monolith (only one part) in our project.
-<img src="images/modular.PNG">
+<img src="images/modular.png">
 
+
+## Tech stack & Open-source libraries
+
+ -   [Kotlin](https://kotlinlang.org/)  based,  [Coroutines](https://github.com/Kotlin/kotlinx.coroutines)  +  [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/)  for asynchronous.
+ - [Hilt](https://dagger.dev/hilt/) for dependency injection.
+ - Jetpack Libraries
+	-   [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - notify domain layer data to views.
+	-   [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - UI related data holder, lifecycle aware.
+	-   [Room Persistence](https://developer.android.com/topic/libraries/architecture/room) - construct a database using the abstract layer.
+ - Architecture
+	 -   MVVM Architecture (View - DataBinding - ViewModel - Model)
+	 -   Repository pattern
+ -   [Glide](https://github.com/bumptech/glide) - loading images.
+ -   [Retrofit2 & OkHttp3](https://github.com/square/retrofit)  - construct the REST APIs and paging network data.
+ -   [Gson](https://github.com/google/gson)  - JSON representation.
+ -   [Timber](https://github.com/JakeWharton/timber)  - logging.
+ -   [Material-Components](https://github.com/material-components/material-components-android)  - Material design components.
+ - [Leak Canary](https://square.github.io/leakcanary/) - memory leak detection library for Android.
+ - Security
+	 - [SQLCipher](https://www.zetetic.net/sqlcipher/) - protecting data.
+	 - ProGuard - disguise the code so that it is difficult to read by others after reverse engineering.
+	 - Certificate Pinning - secure connection from mobile to server.
+ - [Lottie](https://lottiefiles.com/) - displays animation in JSON format.
+ - [Shimmer](https://facebook.github.io/shimmer-android/) - create a shimmer effect on the application.
 
 
  ## License
