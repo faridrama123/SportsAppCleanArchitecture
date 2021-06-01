@@ -19,6 +19,10 @@ In a typical android project it is divided into 3 layers like this:
  - **Domain Layer** contains Entities, Use Case, Repository Interface. This is the most core layer and is associated with business processes.
  - **Data Layer** contains Repository Implementation and DataSource which can be Local DataSource (database) and Remote DataSource (network).
 
+## Modularization
+Modularization is a technique of breaking an Android project into sections called modules. With modularization we will get a lot of advantages over implementing the monolith (only one part) in our project.
+<img src="images/modular.PNG">
+
 
 
  ## License
